@@ -16,7 +16,7 @@ module.exports = {
           "-webkit-text-fill-color": "transparent",
         },
         ".grid-temp-col": {
-          "grid-template-columns": "repeat(autofill,minmax(180px,1fr))",
+          "grid-template-columns": "repeat(auto-fill,minmax(180px,1fr))",
         },
       };
 
