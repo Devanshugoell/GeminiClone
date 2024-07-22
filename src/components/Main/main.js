@@ -63,26 +63,30 @@ const main = () => {
         </div>
         <div className="main-bottom absolute bottom-0 w-full max-w-4xl py-0 px-5 m-auto">
           <div className="search-box flex items-center justify-between gap-5 bg-[#f0f4f9] py-[10px] px-5 rounded-[50px]">
-            <input type="text" placeholder="Enter a prompt here" />
-            <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter a prompt here"
+              className="flex-1 bg-transparent border-none outline-none p-2 text-base"
+            />
+            <div className="flex items-center gap-2">
               <img
-                className="w-6 cursor-pointer"
+                className="w-6 cursor-pointer "
                 src={assets.gallery_icon}
                 alt="Gallery"
               />
               <img
-                className="w-6 cursor-pointer"
+                className="w-6 cursor-pointer "
                 src={assets.mic_icon}
                 alt="Mic"
               />
               <img
-                className="w-6 cursor-pointer"
+                className="w-6 cursor-pointer "
                 src={assets.send_icon}
                 alt="Send"
               />
             </div>
           </div>
-          <p className="bottom-info">
+          <p className="bottom-info text-sm my-4 mx-auto text-center font-light">
             Gemini may display inaccurate info, including about people, so
             double-check its responses. Your privacy & Gemini Apps
           </p>
