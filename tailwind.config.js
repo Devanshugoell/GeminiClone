@@ -18,6 +18,12 @@ module.exports = {
         ".grid-temp-col": {
           "grid-template-columns": "repeat(auto-fill,minmax(180px,1fr))",
         },
+        ".hide-scrollbar::-webkit-scrollbar": {
+          display: "none",
+        },
+        ".scroll-w-none": {
+          "scrollbar-width": "none",
+        },
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);
