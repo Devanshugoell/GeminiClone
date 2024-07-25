@@ -2,7 +2,19 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        loader: {
+          "0%": { "background-position": "-800px 0px" },
+          "100%": { "background-position": "800px 0px" },
+        },
+      },
+      animation: {
+        loader1: "loader 2s linear infinite",
+        loader2: "loader 3s linear infinite",
+        loader3: "loader 4s linear infinite",
+      },
+    },
   },
   plugins: [
     function ({ addUtilities }) {
