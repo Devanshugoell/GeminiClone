@@ -87,7 +87,15 @@ const Main = () => {
             </div>
             <div className="result-data flex items-start gap-5">
               <img className="w-10" src={assets.gemini_icon} alt="gemini" />
-              <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              {loading ? (
+                <div className="loader w-full flex flex-col gap-[10px]">
+                  <hr className="rounded-md border-none bg-[#f6f7f8] bg-gradient-to-r from-slate-100 to-indigo-300 bg-[length:800px_50px] h-5 animate-loader1" />
+                  <hr className="rounded-md border-none bg-[#f6f7f8] bg-gradient-to-r from-slate-100 to-indigo-300 bg-[length:800px_50px] h-5 animate-loader2" />
+                  <hr className="rounded-md border-none bg-[#f6f7f8] bg-gradient-to-r from-slate-100 to-indigo-300 bg-[length:800px_50px] h-5 animate-loader3 " />
+                </div>
+              ) : (
+                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              )}
             </div>
           </div>
         )}
