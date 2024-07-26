@@ -94,7 +94,10 @@ const Main = () => {
                   <hr className="rounded-md w-2/4 border-none bg-[#f6f7f8] bg-gradient-to-r from-slate-100 to-indigo-300 bg-[length:800px_50px] h-4 animate-loader3 " />
                 </div>
               ) : (
-                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+                <p
+                  className="text-lg font-light "
+                  dangerouslySetInnerHTML={{ __html: resultData }}
+                ></p>
               )}
             </div>
           </div>
