@@ -4,7 +4,12 @@ import { Context } from "../../context/context";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
-  const { onSent, prevPrompts, setRecentPrompt } = useContext(Context);
+  const { newChat, onSent, prevPrompts, setRecentPrompt } = useContext(Context);
+
+  const loadPrompt = async (prompt) => {
+    setRecentPrompt(prompt);
+    await onSent(prompt);
+  };
 
   return (
     <div className="sidebar min-h-screen inline-flex flex-col justify-between bg-[#f0f4f9] py-6 px-4">
@@ -24,7 +29,10 @@ const Sidebar = () => {
             <p className="recent-title mt-8 mb-5 ">Recent</p>
             {prevPrompts.map((item) => {
               return (
-                <div className="recent-entry flex items-start gap-[10px] p-[10px] pr-10 rounded-full cursor-pointer text-[#282828] hover:bg-[#e2e6eb]">
+                <div
+                  onClick={() => loadPrompt(item)}
+                  className="recent-entry flex items-start gap-[10px] p-[10px] pr-10 rounded-full cursor-pointer text-[#282828] hover:bg-[#e2e6eb]"
+                >
                   <img
                     className="w-5"
                     src={assets.message_icon}
