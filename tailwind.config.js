@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        small: { max: "639px" }, // Custom screen size for small devices
+      },
       keyframes: {
         loader: {
           "0%": { "background-position": "-800px 0px" },
@@ -26,7 +29,18 @@ module.exports = {
       const newUtilities = {
         // This is called utility classes
         //By using these utility classes, you can apply the custom styles defined in your Tailwind CSS configuration.
-
+        ".small:hidden": {
+          "@screen small": {
+            display: "none",
+          },
+        },
+        // ".small:flex-w": {
+        //   "@screen small": {
+        //     flex: "none",
+        //     width: "150px",
+        //     display: "none",
+        //   },
+        // },
         ".bg-gradient-text": {
           background: "-webkit-linear-gradient(16deg, #4b90ff, #ff5546)",
           "-webkit-background-clip": "text",

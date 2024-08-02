@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar min-h-screen inline-flex flex-col justify-between bg-[#f0f4f9] py-6 px-4">
+    <div className="sidebar min-h-screen inline-flex flex-col justify-between bg-[#f0f4f9] py-6 px-4 small:hidden">
       <div className="top">
         <img
           onClick={() => setExtended(!extended)}
