@@ -28,7 +28,7 @@ const Sidebar = () => {
           {extended ? <p className="text-slate-700">New Chat</p> : null}
         </div>
         {extended ? (
-          <div className="recent flex flex-col">
+          <div className="recent animate-fadeIn flex flex-col">
             <p className="recent-title mt-8 mb-5 ">Recent</p>
             {prevPrompts.map((item) => {
               return (

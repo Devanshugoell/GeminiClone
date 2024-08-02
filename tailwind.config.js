@@ -8,11 +8,16 @@ module.exports = {
           "0%": { "background-position": "-800px 0px" },
           "100%": { "background-position": "800px 0px" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         loader1: "loader 2s linear infinite",
         loader2: "loader 3s linear infinite",
         loader3: "loader 4s linear infinite",
+        fadeIn: "fadeIn 1.5s",
       },
     },
   },
